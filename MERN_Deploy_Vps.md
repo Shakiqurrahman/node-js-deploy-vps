@@ -263,6 +263,47 @@ Verify Auto-Renewal
 certbot renew --dry-run
 ```
 
+
+### To pull changes from GitHub to a VPS, follow these steps:
+
+Log in to Your VPS in Terminal 
+
+```bash
+ ssh root@your_vps_ip
+```
+
+Navigate to your project directory 
+```bash
+cd /var/www/your_project_directory
+```
+
+Pull the latest changes from GitHub 
+```bash
+git pull origin main
+```
+
+Install dependencies (if needed)
+
+- For Backend
+```bash
+cd backend
+npm install
+```
+- For Frontend
+```bash
+cd ../frontend
+npm install
+npm run build
+```
+
+Restart your web server
+```bash
+pm2 restart all
+sudo service nginx reload #reload nginx
+```
+
+That's it...
+
 If you still need help in deployment:
 
 Contact us on email : rahmanshakiqur@gmail.com
