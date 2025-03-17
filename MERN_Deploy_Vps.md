@@ -38,7 +38,16 @@ Install Git
 ```bash
   sudo apt install -y git
 ```
+Install Github cli 
+```bash
+  sudo apt install gh
+```
 
+After GitHub CLI is installed, use this command follow the steps mentioned by it to automatically setup everything required for authentication:
+```bash
+  gh auth login
+```
+NOTE : You need to connect Github CLI with your browser
 
 ###  2. Setting Up the MongoDB Database
 
